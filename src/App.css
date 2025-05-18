@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Scrollbar Styles for QuoteAI */
+::-webkit-scrollbar {
+  width: 12px; /* Slightly wider for a bolder look */
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(139, 92, 246, 0.15); /* indigo-500 with low opacity for glassmorphism */
+  border-radius: 9999px; /* Fully rounded edges */
+  backdrop-filter: blur(8px); /* Glassmorphism effect */
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #ec4899, #4f46e5); /* pink-500 to indigo-600 */
+  border-radius: 9999px;
+  border: 2px solid rgba(255, 255, 255, 0.1); /* Subtle white border for contrast */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #db2777, #4338ca); /* pink-600 to indigo-700 */
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #ec4899 rgba(139, 92, 246, 0.15); 
+}
+
+/* Existing Animation for Home.jsx */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.5s ease-out forwards;
+}
