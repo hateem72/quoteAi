@@ -6,7 +6,7 @@ if (!API_KEY) {
   console.error("API Key is not defined. Please check your environment variables.");
 }
 
-// const API_KEY = 'AIzaSyDb1uuPPv6DtxJ93UsuelfEeFMDPA2nbsY';
+
 
 export const fetchAifyResponse = async (inputText, type) => {
     const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${API_KEY}`;
